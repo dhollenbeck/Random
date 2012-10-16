@@ -13,37 +13,37 @@ Class Random {
 	private static $constants = array();
 
 
-	public static lastname() {
+	public static function lastname() {
 
 	}
-	public static firstname() {
+	public static function firstname() {
 
 	}
-	public static address1(){
+	public static function address1(){
 
 	}
-	public static address2(){
+	public static function address2(){
 
 	}
-	public static city(){
+	public static function city(){
 
 	}
-	public static state(){
+	public static function state(){
 		return static::pick(static::$states);
 	}
-	public static zip(){
+	public static function zip(){
 		return static::digits(5);
 	}
-	public static digits($size) {
+	public static function digits($size) {
 		$digits = '';
-		for($i = 1;$i<=5;$size;$i++){
-			$digits .= static::array(static::$digits);
+		for($i = 1;$i<=$size;$i++){
+			$digits .= static::pick(static::$digits);
 		}
 		return $digits;
 	}
-	public static pick($array){
+	public static function pick($array){
 		return $array[rand(0, sizeof($array)-1)];
 	}
 }
-
+echo Random::digits(10);
 ?>
