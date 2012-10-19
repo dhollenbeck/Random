@@ -2,6 +2,7 @@
 /*
 Usage:
 echo Random::lastname(); //Johnson
+echo Random::address2(); //985 Jones Ave
 echo Random::firstname(); //Mary
 echo Random::pick(array('Dr', 'Mr')); //Mr
 */
