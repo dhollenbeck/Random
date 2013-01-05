@@ -8,7 +8,7 @@ Random Data Generator - use to create fake testing and demo data for your applic
 
 require_once '/path/to/random.php';
 
-//pick between two strings
+//pick array elements
 echo Random::pick(array(':-)', ':-('));
 
 //names
