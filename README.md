@@ -35,7 +35,7 @@ $phone = Random::phone();
 $letters = Random::letters(3);
 $digits = Random::digits(2);
 
-//lexicon ('#'=digits, '?'=letters, '*'=either)
+//lexicon (#=digit, ?=letter, *=either)
 $ssn = Random::lexicon('###-##-####');
 $password = Random::lexicon('My password is: *********');
 
