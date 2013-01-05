@@ -8,10 +8,10 @@ Random Data Generator - use to create fake testing and demo data for your applic
 
 require_once '/path/to/random.php';
 
-//randomly select between two strings
+//pick between two strings
 echo Random::pick(array(':-)', ':-('));
 
-//random names
+//names
 $lastname = Random::lastname();
 $firstname = Random::firstname();
 $girl = Random::firstname('F');
@@ -24,6 +24,10 @@ $city = Random::city();
 $state = Random::state();
 $zip = Random::zip();
 
+//datetime
+$dob = Random::birthdate();
+$appt = Random::date('Y-m-d H:i:s', '+1 days', '+50 days');
+
 //Random person array
 $male = Random::person('M');
 $female = Random::person('F');
@@ -31,7 +35,7 @@ $female = Random::person('F');
 //populating your database
 $user = new Database\Model\User();
 for($i=0;$i<1000;$i++){
-	$person = Random::person();
+	$person = Random::person(); //random gender
 	$user->create($person);
 }
 ```

@@ -42,13 +42,13 @@ Class Random {
 			'prefix' => static::prefix($gender),
 			'firstname' => static::firstname($gender),
 			'lastname' => static::lastname(),
+			'birthdate' => static::birthdate(),
 			'street1' => static::street1(),
 			'street2' => static::street2(),
 			'city' => static::city(),
 			'state' => static::state(),
 			'zip' => static::zip(),
 			'phone' => static::phone()
-
 		);
 	}
 
@@ -88,6 +88,14 @@ Class Random {
 		$gender = (!$gender) ? static::gender() : $gender;
 		$names = ('M'=== $gender) ? static::$males : static::$females;
 		return static::pick($names);
+	}
+
+	/**
+	 * Random birth date.
+	 * @return string Birth date.
+	 */
+	public static function birthdate(){
+		return static::date('Y-m-d', '-70 years', '-13 years');
 	}
 
 	/**
@@ -174,6 +182,18 @@ Class Random {
 	 */
 	public static function pick($choices){
 		return $choices[rand(0, sizeof($choices)-1)];
+	}
+
+	/**
+	 * Random date or time.
+	 * @param string $format The format of the outputted date string. Defaults to 'Y-m-d H:i:s';
+	 * @param string $min Minimum english textual datetime description.
+	 * @param string $max Maximum english textual datetime description.
+	 * @return string Datetime.
+	 */
+	public static function date($format = 'Y-m-d H:i:s', $min = '-1 year', $max = '+1 year'){
+		$time = rand(strtotime($min), strtotime($max));
+		return date($format, $time);
 	}
 }
 ?>
