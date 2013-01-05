@@ -172,7 +172,7 @@ Class Random {
 
 	/**
 	 * Formatted string with random data.
-	 * @param string String format. Use '#' for digits. Use '?' for letters.
+	 * @param string String format. Use '#' for digits. Use '?' for letters. Use '*' for either.
 	 * @return string Formatted string with random data.
 	 */
 	public static function lexicon($format){
@@ -180,6 +180,7 @@ Class Random {
 		foreach($parts as $key=>$char){
 			if('#'===$char) $parts[$key] = static::digits(1);
 			if('?'===$char) $parts[$key] = static::letters(1);
+			if('*'===$char) $parts[$key] = (rand(0,1)) ? static::digits(1) : static::letters(1);
 		}
 		return implode('', $parts);
 	}

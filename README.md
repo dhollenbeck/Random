@@ -34,8 +34,10 @@ $either = Random::person();
 $phone = Random::phone();
 $letters = Random::letters(3);
 $digits = Random::digits(2);
+
+//lexicon ('#'=digits, '?'=letters, '*'=either)
 $ssn = Random::lexicon('###-##-####');
-$password = Random::lexicon('???#??##??');
+$password = Random::lexicon('My password is: *********');
 
 //populating your database
 $user = new Database\Model\User();
