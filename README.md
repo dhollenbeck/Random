@@ -24,6 +24,8 @@ $zip = Random::zip();
 //datetime
 $dob = Random::birthdate();
 $appt = Random::date('Y-m-d H:i:s', '+1 days', '+50 days');
+$am_pm = Random::date('a');
+$timezone = Random::date('e');
 
 //person array
 $male = Random::person('M');
