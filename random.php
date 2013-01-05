@@ -148,17 +148,40 @@ Class Random {
 	 * Random 10 digit phone number.
 	 * @return string Phone number.
 	 */
-	public static function phone(){
-		return static::digits(10);
+	public static function phone($format = '(###) ###-####'){
+		return static::lexicon($format);
 	}
 
 	/**
 	 * Random digits.
-	 * @param intger $length Number of digits.
+	 * @param integer $length Number of digits.
 	 * @return string Digits.
 	 */
 	public static function digits($length = 2){
 		return static::concat(range(0,9), $length);
+	}
+
+	/**
+	 * Random letters.
+	 * @param integer $length Number of digits.
+	 * @return string Letters.
+	 */
+	public static function letters($length = 2){
+		return static::concat(range('a','z'), $length);
+	}
+
+	/**
+	 * Formatted string with random data.
+	 * @param string String format. Use '#' for digits. Use '?' for letters.
+	 * @return string Formatted string with random data.
+	 */
+	public static function lexicon($format){
+		$parts = str_split($format);
+		foreach($parts as $key=>$char){
+			if('#'===$char) $parts[$key] = static::digits(1);
+			if('?'===$char) $parts[$key] = static::letters(1);
+		}
+		return implode('', $parts);
 	}
 
 	/**

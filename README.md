@@ -30,6 +30,13 @@ $male = Random::person('M');
 $female = Random::person('F');
 $either = Random::person();
 
+//misc
+$phone = Random::phone();
+$letters = Random::letters(3);
+$digits = Random::digits(2);
+$ssn = Random::lexicon('###-##-####');
+$password = Random::lexicon('???#??##??');
+
 //populating your database
 $user = new Database\Model\User();
 for($i=0;$i<1000;$i++){
