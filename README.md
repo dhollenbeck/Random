@@ -6,7 +6,7 @@ Random Data Generator - use to create testing and demo data for your application
 ## Usage ##
 ```php
 //randomly select between two strings
-echo Random::pick(array(':)', ':-('));
+echo Random::pick(array(':-)', ':-('));
 
 //random names
 $lastname = Random::lastname();
