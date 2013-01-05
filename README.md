@@ -8,8 +8,8 @@ Random Data Generator - use to create fake testing and demo data for your applic
 
 require_once '/path/to/random.php';
 
-//pick array elements
-echo Random::pick(array(':-)', ':-('));
+//array elements
+echo Random::pick(array(':-)', ':-(', ';-\'));
 
 //names
 $lastname = Random::lastname();
@@ -17,7 +17,7 @@ $firstname = Random::firstname();
 $girl = Random::firstname('F');
 $boy = Random::firstname('M');
 
-//random address
+//address
 $street1 = Random::street1();
 $street2 = Random::street2();
 $city = Random::city();
@@ -28,7 +28,7 @@ $zip = Random::zip();
 $dob = Random::birthdate();
 $appt = Random::date('Y-m-d H:i:s', '+1 days', '+50 days');
 
-//Random person array
+//person array
 $male = Random::person('M');
 $female = Random::person('F');
 $either = Random::person();
