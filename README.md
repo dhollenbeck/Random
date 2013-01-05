@@ -47,6 +47,9 @@ for($i=0;$i<1000;$i++){
 }
 ```
 
+## Simlar Projects ##
+https://github.com/fzaninotto/Faker
+
 ## Legal (MIT License)
 
 Copyright (c) 2013 Dan Hollenbeck
