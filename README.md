@@ -21,7 +21,7 @@ $city = Random::city();
 $state = Random::state();
 $zip = Random::zip();
 
-//Random person
+//Random person array
 $male = Random::person('M');
 $female = Random::person('F');
 
