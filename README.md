@@ -33,7 +33,7 @@ $either = Random::person();
 //populating your database
 $user = new Database\Model\User();
 for($i=0;$i<1000;$i++){
-	$person = Random::person(); //random gender
+	$person = Random::person();
 	$user->create($person);
 }
 ```
