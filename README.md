@@ -31,6 +31,7 @@ $appt = Random::date('Y-m-d H:i:s', '+1 days', '+50 days');
 //Random person array
 $male = Random::person('M');
 $female = Random::person('F');
+$either = Random::person();
 
 //populating your database
 $user = new Database\Model\User();
