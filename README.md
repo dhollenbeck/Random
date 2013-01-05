@@ -1,10 +1,13 @@
 Random
 ======
 
-Random Data Generator - use to create testing and demo data for your applications.
+Random Data Generator - use to create fake testing and demo data for your applications.
 
 ## Usage ##
 ```php
+
+require_once '/path/to/random.php';
+
 //randomly select between two strings
 echo Random::pick(array(':-)', ':-('));
 
