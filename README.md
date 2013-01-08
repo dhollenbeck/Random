@@ -25,7 +25,6 @@ $zip = Random::zip();
 $dob = Random::birthdate();
 $appt = Random::date('Y-m-d H:i:s', '+1 days', '+50 days');
 $am_pm = Random::date('a');
-$timezone = Random::date('e');
 
 //person array
 $male = Random::person('M');
@@ -49,7 +48,7 @@ for($i=0;$i<1000;$i++){
 }
 ```
 
-## Simlar Projects ##
+## Similar Projects ##
 https://github.com/fzaninotto/Faker
 
 ## Legal (MIT License)
